@@ -40,7 +40,7 @@ variable "key_pair_name" {
 variable "ssh_allowed_cidr" {
   description = "CIDR block allowed to SSH into the bastion host — restrict this to your IP in production"
   type        = string
-  default     = "0.0.0.0/0"
+  default     = "0.0.0.0/0" 
 }
 
 # ───────────────────────────────
