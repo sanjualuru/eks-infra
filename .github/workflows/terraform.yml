@@ -71,7 +71,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const plan = fs.readFileSync('infra/environments/dev/plan_output.txt', 'utf8');
+            const plan = fs.readFileSync('infra/plan_output.txt', 'utf8');
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
