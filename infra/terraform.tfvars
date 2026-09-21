@@ -1,7 +1,7 @@
 # ───────────────────────────────────────────────
 # terraform.tfvars
 # Edit these values before running `terraform apply`.
-# Defaults below match your original eksctl script as closely as possible.
+# Defaults below match your original eksctl script as closely as possible.  
 # ───────────────────────────────────────────────
 
 aws_region   = "ap-south-1"
