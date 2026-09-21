@@ -28,13 +28,13 @@ variable "bastion_instance_type" {
 variable "bastion_root_volume_size" {
   description = "Root EBS volume size in GB for the bastion host"
   type        = number
-  default     = 30
+  default     = 60
 }
 
 variable "key_pair_name" {
   description = "Existing EC2 key pair name for SSH access to the bastion host"
   type        = string
-  default     = "abcd"
+  default     = "eks_keypair"
 }
 
 variable "ssh_allowed_cidr" {
@@ -97,13 +97,13 @@ variable "nodegroup_name" {
 variable "node_instance_types" {
   description = "EC2 instance types for EKS worker nodes (t3.micro is too small for production EKS — using t3.medium)"
   type        = list(string)
-  default     = ["t3.medium"]
+  default     = ["m7i-flex.large"]
 }
 
 variable "node_volume_size" {
   description = "EBS root volume size in GB for each EKS worker node"
   type        = number
-  default     = 20
+  default     = 40
 }
 
 variable "node_desired_size" {
